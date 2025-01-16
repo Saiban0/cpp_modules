@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/15 18:40:34 by bchedru           #+#    #+#             */
+/*   Updated: 2025/01/16 18:39:40 by bchedru          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "phonebook.h"
 
 Contact::Contact()
@@ -8,27 +20,27 @@ Contact::~Contact()
 {
 }
 
-void	Contact::setFirstName(std::string const first_name)
+void	Contact::setFirstName(const std::string first_name)
 {
 	this->_first_name = first_name;
 }
 
-void	Contact::setLastName(std::string const last_name)
+void	Contact::setLastName(const std::string last_name)
 {
 	this->_last_name = last_name;
 }
 
-void	Contact::setNickname(std::string const nickname)
+void	Contact::setNickname(const std::string nickname)
 {
 	this->_nickname = nickname;
 }
 
-void	Contact::setPhoneNumber(std::string const phone_number)
+void	Contact::setPhoneNumber(const std::string phone_number)
 {
 	this->_phone_number = phone_number;
 }
 
-void	Contact::setDarkestSecret(std::string const darkest_secret)
+void	Contact::setDarkestSecret(const std::string darkest_secret)
 {
 	this->_darkest_secret = darkest_secret;
 }
