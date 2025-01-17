@@ -6,7 +6,7 @@
 #    By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/15 15:53:04 by bchedru           #+#    #+#              #
-#    Updated: 2025/01/15 18:47:11 by bchedru          ###   ########.fr        #
+#    Updated: 2025/01/17 15:09:04 by bchedru          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CPP = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-FILES = main Contact Phonebook
+FILES = main Contact Phonebook phonebook_utils
 
 OBJ_DIR = obj/
 
