@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 18:11:28 by bchedru           #+#    #+#             */
-/*   Updated: 2025/01/17 18:38:54 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/01/21 15:14:44 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	main(void)
 			else
 				nb_contacts++;
 			phonebook.add_contact(nb_contacts - 1);
-			std::cout << "New contact successfully added" << std::endl;
 		}
 		else if (input.compare("SEARCH") == 0)
 			phonebook.search_contact();
