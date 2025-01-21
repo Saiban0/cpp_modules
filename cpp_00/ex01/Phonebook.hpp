@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 18:40:28 by bchedru           #+#    #+#             */
-/*   Updated: 2025/01/17 17:33:43 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/01/21 16:08:41 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ std::string	ft_itoa(int i);
 void		upper_str(std::string *str);
 std::string	get_user_input(std::string prompt, bool number);
 bool		check_user_input(std::string input, bool number);
+bool		check_contact(Contact contact);
 void		print_info(std::string str);
 
