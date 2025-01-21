@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 18:44:15 by bchedru           #+#    #+#             */
-/*   Updated: 2025/01/17 18:40:14 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/01/21 16:22:21 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ void	Phonebook::add_contact(int id)
 	temp.setNickname(get_user_input("Please enter nickname : ", 0));
 	temp.setPhoneNumber(get_user_input("Please enter phone number : ", 1));
 	temp.setDarkestSecret(get_user_input("Please enter darkest secret : ", 0));
-	this->_contact_tab[id] = temp;
+	if (check_contact(temp))
+		this->_contact_tab[id] = temp;
 }
 
 void	Phonebook::display_phonebook()
 {
 	std::cout << "|     Index|First name| Last name|  Nickname|" << std::endl;
 	for (int i = 0; i < 8; i++){
-		// std::cout << "|";
 		print_info(ft_itoa(i + 1));
 		print_info(this->_contact_tab[i].getFirstName());
 		print_info(this->_contact_tab[i].getLastName());
@@ -53,7 +53,6 @@ void	Phonebook::search_contact()
 	bool		valid_input = false;
 
 	display_phonebook();
-	// signal(SIGINT, SIG_IGN);
 	while (!valid_input){
 		std::getline(std::cin, input);
 		if (!std::cin.good())
