@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 18:40:34 by bchedru           #+#    #+#             */
-/*   Updated: 2025/01/17 17:54:46 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/01/21 16:57:30 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,14 @@ std::string	Contact::getPhoneNumber()
 std::string	Contact::getDarkestSecret()
 {
 	return (_darkest_secret);
+}
+
+bool		Contact::check_contact()
+{
+	if (this->getFirstName().empty() || this->getLastName().empty()
+			|| this->getNickname().empty() || this->getPhoneNumber().empty()
+			|| this->getDarkestSecret().empty())
+		return(false);
+	std::cout << "New contact successfully added" << std::endl;
+	return(true);
 }

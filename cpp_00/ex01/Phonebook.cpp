@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 18:44:15 by bchedru           #+#    #+#             */
-/*   Updated: 2025/01/21 16:22:21 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/01/21 16:58:02 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	Phonebook::add_contact(int id)
 	temp.setNickname(get_user_input("Please enter nickname : ", 0));
 	temp.setPhoneNumber(get_user_input("Please enter phone number : ", 1));
 	temp.setDarkestSecret(get_user_input("Please enter darkest secret : ", 0));
-	if (check_contact(temp))
+	if (temp.check_contact())
 		this->_contact_tab[id] = temp;
 }
 

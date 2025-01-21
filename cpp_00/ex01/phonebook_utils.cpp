@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 15:41:38 by bchedru           #+#    #+#             */
-/*   Updated: 2025/01/21 16:22:18 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/01/21 16:54:19 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,14 +77,4 @@ std::string	ft_itoa(int i)
 	if (ss.fail())
 		return "";
 	return (str);
-}
-
-bool		check_contact(Contact contact)
-{
-	if (contact.getFirstName().empty() || contact.getLastName().empty()
-			|| contact.getNickname().empty() || contact.getPhoneNumber().empty()
-			|| contact.getDarkestSecret().empty())
-		return(false);
-	std::cout << "New contact successfully added" << std::endl;
-	return(true);
 }
