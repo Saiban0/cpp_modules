@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 15:41:38 by bchedru           #+#    #+#             */
-/*   Updated: 2025/01/17 17:35:13 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/01/21 16:22:18 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ std::string	get_user_input(std::string prompt, bool number)
 		signal(SIGINT, SIG_IGN);
 		std::getline(std::cin, input);
 		if (!std::cin.good())
-			return (NULL);
+			break ;
 		verif = check_user_input(input, number);
 	}
 	return (input);
@@ -53,7 +53,7 @@ bool	check_user_input(std::string input, bool number)
 
 std::string trunc_str(std::string str)
 {
-	std::string dest = str.substr(0, 9);	
+	std::string dest = str.substr(0, 9);
 	dest += '.';
 	return (dest);
 }
@@ -77,4 +77,14 @@ std::string	ft_itoa(int i)
 	if (ss.fail())
 		return "";
 	return (str);
+}
+
+bool		check_contact(Contact contact)
+{
+	if (contact.getFirstName().empty() || contact.getLastName().empty()
+			|| contact.getNickname().empty() || contact.getPhoneNumber().empty()
+			|| contact.getDarkestSecret().empty())
+		return(false);
+	std::cout << "New contact successfully added" << std::endl;
+	return(true);
 }
