@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 18:44:15 by bchedru           #+#    #+#             */
-/*   Updated: 2025/01/21 16:58:02 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/05/30 17:41:09 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,10 @@ void	Phonebook::search_contact()
 		std::getline(std::cin, input);
 		if (!std::cin.good())
 			return;
+		if (input.length() == 0){
+			std::cout << "Please enter an id" << std::endl;
+			continue;
+		}
 		id = atoi(input.c_str());
 		if (1 <= id && id <= 8)
 			valid_input = true;
