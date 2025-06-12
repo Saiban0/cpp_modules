@@ -6,10 +6,11 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 20:18:04 by bchedru           #+#    #+#             */
-/*   Updated: 2025/06/12 16:32:48 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/06/12 16:35:13 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
 int main(void)
