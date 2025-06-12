@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/12 17:49:11 by bchedru           #+#    #+#             */
-/*   Updated: 2025/06/12 20:40:11 by bchedru          ###   ########.fr       */
+/*   Created: 2025/06/12 19:55:13 by bchedru           #+#    #+#             */
+/*   Updated: 2025/06/12 20:47:23 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include "Animal.hpp"
 
-class Cat : public Animal
+class	Brain
 {
+	private:
+		std::string	_ideas[100];
 	public:
-		Cat();
-		Cat(const Cat& original);
-		~Cat();
-		Cat	&operator=(const Cat &other);
+		/*Constructors and destructor*/
+		Brain();
+		Brain(const Brain& original);
+		~Brain();
+		Brain	&operator=(const Brain &other);
+		/*Setters and getters*/
+		std::string	*getIdeas()const;
+		void		setIdeas();
+		/*Other methods*/
 };

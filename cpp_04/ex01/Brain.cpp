@@ -1,38 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/12 17:48:55 by bchedru           #+#    #+#             */
-/*   Updated: 2025/06/12 20:38:36 by bchedru          ###   ########.fr       */
+/*   Created: 2025/06/12 20:01:56 by bchedru           #+#    #+#             */
+/*   Updated: 2025/06/12 20:47:24 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Brain.hpp"
 
-Cat::Cat() : Animal()
+Brain::Brain()
 {
-	this->setType("Cat");
-	std::cout << "Cat constructor called" << std::endl;
+	std::cout << "Default brain constructor called" << std::endl;
+	this->setIdeas();
 }
 
-Cat::Cat(const Cat& original) : Animal(original)
+Brain::Brain(const Brain& original)
 {
-	std::cout << "Cat copy constructor called" << std::endl;
+	std::cout << "Brain copy constructor called" << std::endl;
 	*this = original;
 }
 
-Cat::~Cat()
+Brain::~Brain()
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "Brain destructor called" << std::endl;
 }
 
-Cat	&Cat::operator=(const Cat &other)
+std::string	*Brain::getIdeas()const
+{
+	return (this->_ideas);
+}
+
+void	Brain::setIdeas()
+{
+	std::string ideas[100];
+
+	this->_ideas = ideas;
+}
+
+Brain	&Brain::operator=(const Brain &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other)
-		this->setType(other.getType());
+		this->setIdeas(other.getIdeas());
 	return *this;
 }
