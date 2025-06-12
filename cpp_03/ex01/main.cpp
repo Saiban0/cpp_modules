@@ -6,30 +6,30 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 20:18:04 by bchedru           #+#    #+#             */
-/*   Updated: 2025/06/12 16:15:37 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/06/12 16:15:34 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void)
 {
-	ClapTrap Clap("Clap");
-	ClapTrap Trap("Trap");
-	Clap.attack("Trap");
+	ScavTrap Scav("Scav");
+	ScavTrap Trap("Trap");
+	Scav.attack("Trap");
+	std::cout << "Trap hit points = " << Trap.getHitPoints() << std::endl;
+	Scav.setAttackDamage(1);
+	Scav.attack("Trap");
 
-	Clap.setAttackDamage(1);
-	Clap.attack("Trap");
+	Scav.takeDamage(5);
+	std::cout << "Scav hit points = " << Scav.getHitPoints() << std::endl;
+	Scav.beRepaired(5);
 
-	Clap.takeDamage(5);
-	std::cout << "Clap hit points = " << Clap.getHitPoints() << std::endl;
-	Clap.beRepaired(5);
-
-	std::cout << std::endl << "Clap hit points = " << Clap.getHitPoints() << " Clap energy points = " << Clap.getEnergyPoints() << std::endl;
-
-	Clap.setEnergyPoints(0);
-	Clap.beRepaired(5);
-	Clap.setHitPoints(0);
-	Clap.attack("Trap");
+	std::cout << std::endl << "Scav hit points = " << Scav.getHitPoints() << " Scav energy points = " << Scav.getEnergyPoints() << std::endl;
+	Scav.guardGate();
+	Scav.setEnergyPoints(0);
+	Scav.beRepaired(5);
+	Scav.setHitPoints(0);
+	Scav.attack("Trap");
 	return (0);
 }
