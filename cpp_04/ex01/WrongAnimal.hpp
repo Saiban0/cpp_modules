@@ -22,7 +22,7 @@ class WrongAnimal
 		/*Constructors and destructors*/
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal& original);
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 		/*Setters and getters*/
 		void		setType(std::string type);
 		std::string	getType()const;

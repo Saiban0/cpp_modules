@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:49:13 by bchedru           #+#    #+#             */
-/*   Updated: 2025/06/12 20:40:03 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/06/13 11:21:13 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Animal
 		/*Constructors and destructors*/
 		Animal();
 		Animal(const Animal& original);
-		~Animal();
+		virtual ~Animal();
 		/*Setters and getters*/
 		void		setType(std::string type);
 		std::string	getType()const;
