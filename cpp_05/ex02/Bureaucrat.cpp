@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 14:39:27 by bchedru           #+#    #+#             */
-/*   Updated: 2025/06/18 18:48:01 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/06/19 17:09:32 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,18 +72,18 @@ const char *Bureaucrat::GradeTooLowException::what() const throw()
 
 void	Bureaucrat::incrementGrade()
 {
-		if ((this->_grade - 1) < 1)
-			throw Bureaucrat::GradeTooLowException();
-		else
-			this->_grade--;
+	if ((this->_grade - 1) < 1)
+		throw Bureaucrat::GradeTooLowException();
+	else
+		this->_grade--;
 }
 
 void	Bureaucrat::decrementGrade()
 {
-		if ((this->_grade + 1) > 150)
-			throw Bureaucrat::GradeTooHighException();
-		else
-			this->_grade++;
+	if ((this->_grade + 1) > 150)
+		throw Bureaucrat::GradeTooHighException();
+	else
+		this->_grade++;
 }
 
 void	Bureaucrat::executeForm(AForm const &form)
@@ -91,11 +91,11 @@ void	Bureaucrat::executeForm(AForm const &form)
 	try
 	{
 		form.execute(*this);
+		std::cout << this->getName() << " executed " << form.getName() << std::endl;
 	}
 	catch (const std::exception& e)
 	{
 		std::cerr << "Exception caught: " << e.what() << std::endl;
 		return;
 	}
-	std::cout << this->getName() << " executed " << form.getName() << std::endl;
 }
