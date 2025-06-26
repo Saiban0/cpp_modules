@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:49:11 by bchedru           #+#    #+#             */
-/*   Updated: 2025/06/13 11:13:50 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/06/26 23:59:56 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ class Cat : public Animal
 		Cat(const Cat& original);
 		~Cat();
 		Cat	&operator=(const Cat &other);
+		void	makeSound()const;
 };

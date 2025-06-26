@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:48:51 by bchedru           #+#    #+#             */
-/*   Updated: 2025/06/13 11:15:15 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/06/27 00:01:31 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,9 @@ Dog	&Dog::operator=(const Dog &other)
 		delete this->_brain;
 		this->_brain = new Brain(*other._brain);
 	}	return *this;
+}
+
+void	Dog::makeSound()const
+{
+	std::cout << "*Bark*" << std::endl;
 }

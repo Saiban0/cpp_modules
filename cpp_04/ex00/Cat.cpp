@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:48:55 by bchedru           #+#    #+#             */
-/*   Updated: 2025/06/12 20:38:36 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/06/26 23:57:34 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,9 @@ Cat	&Cat::operator=(const Cat &other)
 	if (this != &other)
 		this->setType(other.getType());
 	return *this;
+}
+
+void	Cat::makeSound()const
+{
+	std::cout << "*Meows*" << std::endl;
 }

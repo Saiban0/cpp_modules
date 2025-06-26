@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:48:55 by bchedru           #+#    #+#             */
-/*   Updated: 2025/06/13 11:15:10 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/06/27 00:01:08 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,9 @@ Cat	&Cat::operator=(const Cat &other)
 		this->_brain = new Brain(*other._brain);
 	}
 	return *this;
+}
+
+void	Cat::makeSound()const
+{
+	std::cout << "*Meow*" << std::endl;
 }

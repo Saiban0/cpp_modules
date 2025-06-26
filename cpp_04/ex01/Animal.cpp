@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:49:15 by bchedru           #+#    #+#             */
-/*   Updated: 2025/06/12 20:26:40 by bchedru          ###   ########.fr       */
+/*   Updated: 2025/06/27 00:00:13 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,5 @@ Animal	&Animal::operator=(const Animal &other)
 
 void	Animal::makeSound()const
 {
-	switch (this->getType()[0])
-	{
-		case 'D':
-			std::cout << "*Woof*" << std::endl;
-			break;
-		case 'C':
-			std::cout << "*Meow*" << std::endl;
-			break;
-		default:
-			std::cout << "*Undefined animal noise*" << std::endl;
-	}
+	std::cout << "*Undefined animal noise*" << std::endl;
 }
